@@ -561,7 +561,7 @@
                             <i class="ph ph-flag text-3xl text-navy-primary"></i>
                             <h3 class="text-xl font-bold text-navy-900">R - Rendimiento</h3>
                         </div>
-                        <p class="text-gray-600">Clasificar correctamente las piezas, reducir errores, evitar daños y hacerlo en el menor tiempo.</p>
+                        <p class="text-gray-600">Clasificar correctamente las piezas, reducir errores, evitar daños y realizar el proceso en el menor tiempo posible.</p>
                     </div>
 
                     <div class="bg-white p-6 rounded-xl shadow border-t-4 border-navy-600">
@@ -569,7 +569,7 @@
                             <i class="ph ph-map-trifold text-3xl text-navy-600"></i>
                             <h3 class="text-xl font-bold text-navy-900">E - Entorno</h3>
                         </div>
-                        <p class="text-gray-600">Cinta transportadora, piezas a clasificar, zona de trabajo y recipientes/sectores de depósito.</p>
+                        <p class="text-gray-600">Cinta transportadora, piezas a clasificar, zona de trabajo y recipientes o sectores donde se depositan las piezas.</p>
                     </div>
 
                     <div class="bg-white p-6 rounded-xl shadow border-t-4 border-navy-700">
@@ -577,7 +577,7 @@
                             <i class="ph ph-robot-arm text-3xl text-navy-700"></i>
                             <h3 class="text-xl font-bold text-navy-900">A - Actuadores</h3>
                         </div>
-                        <p class="text-gray-600">Brazo robótico, motores, pinza o sistema de agarre y mecanismos desplazadores.</p>
+                        <p class="text-gray-600">Brazo robótico, motores, pinza o sistema de agarre y mecanismos para desplazar las piezas.</p>
                     </div>
 
                     <div class="bg-white p-6 rounded-xl shadow border-t-4 border-navy-800">
@@ -585,7 +585,7 @@
                             <i class="ph ph-barcode text-3xl text-navy-800"></i>
                             <h3 class="text-xl font-bold text-navy-900">S - Sensores</h3>
                         </div>
-                        <p class="text-gray-600">Cámaras, sensores de presencia, color, forma, tamaño y posición.</p>
+                        <p class="text-gray-600">Cámaras, sensores de presencia, color, forma, tamaño, posición u otros sensores necesarios para identificar las piezas.</p>
                     </div>
                 </div>
             </div>
@@ -599,18 +599,20 @@
                 
                 <div class="flex flex-col md:flex-row gap-6">
                     <div class="w-full md:w-1/2">
-                        <h3 class="font-bold text-xl text-navy-900 mb-4">Reglas del Agente Reactivo</h3>
-                        <ul class="space-y-4 mb-6">
-                            <li class="bg-white p-4 rounded-lg shadow-sm border-l-4 border-gray-300">
-                                <strong>Si está en Blanco:</strong> Cambia a Negro &rarr; Gira 90º Derecha &rarr; Avanza.
-                            </li>
-                            <li class="bg-gray-900 text-white p-4 rounded-lg shadow-sm border-l-4 border-gray-500">
-                                <strong>Si está en Negro:</strong> Cambia a Blanco &rarr; Gira 90º Izquierda &rarr; Avanza.
-                            </li>
+                        <h3 class="font-bold text-xl text-navy-900 mb-2">Tabla REAS y Entorno</h3>
+                         <ul class="text-sm text-gray-700 mb-4 list-disc pl-5 space-y-1">
+                            <li><strong>Rendimiento:</strong> Modificar el espacio siguiendo reglas.</li>
+                            <li><strong>Entorno:</strong> Cuadrícula discreta (casillas blancas/negras). Parcialmente observable, Determinista, Secuencial, Estático.</li>
+                            <li><strong>Actuadores:</strong> Cambiar color, girar 90º y avanzar.</li>
+                            <li><strong>Sensores:</strong> Sensor de color/estado actual y orientación.</li>
                         </ul>
-                        <div class="bg-blue-50 p-4 rounded-lg border border-blue-200 text-sm">
-                            <strong class="text-navy-800 block mb-1">¿Patrón observado?</strong>
-                            Sí. Tras un período inicial aparentemente caótico, la hormiga comienza a construir sistemáticamente una estructura llamada "autopista" de manera predecible.
+                        <div class="bg-blue-50 p-3 rounded-lg border border-blue-200 text-sm">
+                            <strong class="text-navy-800 block mb-1">Patrones Emergentes observados:</strong>
+                            <ol class="list-decimal pl-4 space-y-1">
+                                <li><strong>Simetría Inicial</strong> (pasos 0 a ~500)</li>
+                                <li><strong>Fase Caótica</strong> (pasos ~500 a 10,287)</li>
+                                <li><strong>La Carretera:</strong> A partir de la iteración 10,288, repite un bucle de 104 pasos construyendo una estructura infinita.</li>
+                            </ol>
                         </div>
                     </div>
                     
@@ -632,17 +634,18 @@
                 
                 <div class="flex flex-col md:flex-row gap-6">
                     <div class="w-full md:w-1/2">
-                        <p class="text-gray-700 mb-4">El estado de todas las células se calcula en simultáneo según 8 vecinas:</p>
-                        <div class="space-y-3">
-                            <div class="bg-green-50 p-3 rounded border border-green-200">
-                                <strong class="text-green-700">Nacer:</strong> Célula muerta con exactamente 3 vecinas vivas.
-                            </div>
-                            <div class="bg-red-50 p-3 rounded border border-red-200">
-                                <strong class="text-red-700">Morir:</strong> Célula viva con más de 3 (sobrepoblación) o menos de 2 vecinas (aislamiento).
-                            </div>
-                            <div class="bg-blue-50 p-3 rounded border border-blue-200">
-                                <strong class="text-blue-700">Vivir:</strong> Célula viva con 2 o 3 vecinas se mantiene.
-                            </div>
+                        <p class="text-sm text-gray-700 mb-3 border-l-4 border-navy-600 pl-3">Agente: Sistema encargado de actualizar el tablero completo simultáneamente.</p>
+                        
+                        <h3 class="font-bold text-navy-900 mb-1 text-sm">Reglas de Vida</h3>
+                        <div class="space-y-2 text-xs mb-4">
+                            <div class="bg-green-50 p-2 rounded border border-green-200"><strong class="text-green-700">Nacer:</strong> Célula muerta con exactamente 3 vecinas vivas.</div>
+                            <div class="bg-red-50 p-2 rounded border border-red-200"><strong class="text-red-700">Morir:</strong> Célula viva con más de 3 o menos de 2 vecinas.</div>
+                            <div class="bg-blue-50 p-2 rounded border border-blue-200"><strong class="text-blue-700">Vivir:</strong> Célula viva con 2 o 3 vecinas.</div>
+                        </div>
+
+                        <div class="bg-gray-50 p-3 rounded-lg border border-gray-200 text-xs">
+                            <strong class="text-navy-800 block mb-1">Propiedades del Entorno:</strong>
+                            Totalmente observable (conoce todas las células), Determinista, Secuencial, Estático, Discreto.
                         </div>
                     </div>
                     
