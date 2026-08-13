@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Presentación TP1 - Inteligencia Artificial</title>
     
-    <!-- Cargando Tailwind CSS y configurando colores personalizados -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -34,16 +33,12 @@
         }
     </script>
 
-    <!-- Cargando íconos de Phosphor -->
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
-    
-    <!-- Fuentes de Google -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-    
-       
 
     <style>
-         @media print {
+        /* --- CÓDIGO PARA PODER GUARDAR COMO PDF --- */
+        @media print {
             body, html, main {
                 overflow: visible !important;
                 height: auto !important;
@@ -65,8 +60,8 @@
         body {
             font-family: 'Inter', sans-serif;
             overflow: hidden;
-            background-color: #FDFCF8; /* Cream */
-            color: #0B192C; /* Navy profundo */
+            background-color: #FDFCF8;
+            color: #0B192C;
         }
         
         .slide {
@@ -83,7 +78,7 @@
             flex-direction: column;
             padding: 2rem;
             box-sizing: border-box;
-            overflow-y: auto; /* Para permitir scroll en pantallas pequeñas si el contenido es largo */
+            overflow-y: auto;
         }
 
         .slide.active {
@@ -101,7 +96,7 @@
             max-width: 1100px;
             margin: 0 auto;
             width: 100%;
-            padding-bottom: 4rem; /* Espacio para los controles */
+            padding-bottom: 4rem;
         }
         
         @media (min-width: 768px) {
@@ -126,7 +121,10 @@
                 <div class="w-24 h-1 bg-navy-primary mx-auto mb-8 rounded-full"></div>
                 <div class="bg-cream-dark p-6 rounded-2xl inline-block shadow-sm border border-gray-200">
                     <p class="font-semibold text-navy-800 mb-2">Integrantes:</p>
-                    <p class="text-gray-700">[Tus Nombres / Grupo]</p>
+                    <p class="text-gray-700">Caprioli, Fausto</p>
+                    <p class="text-gray-700">Kaiser, Ignacio</p>
+                    <p class="text-gray-700">Ortiz, Pedro</p>
+                    <p class="text-gray-700">Quintana, Lucas</p>
                 </div>
             </div>
         </section>
@@ -197,20 +195,16 @@
                         <p class="text-gray-700 text-lg mb-6 leading-relaxed">
                             Aquel que, al tomar información del medio (sensar) y decidir modificarlo (actuar), elige la acción que <strong class="text-navy-900 bg-navy-light px-2 py-1 rounded">maximiza el éxito</strong> frente a las condiciones actuales.
                         </p>
-                        <div class="flex items-center gap-4 text-navy-800 font-semibold bg-cream-dark p-4 rounded-xl">
-                            <i class="ph ph-trend-up text-3xl"></i>
-                            <span>Busca siempre el mejor resultado posible.</span>
-                        </div>
                     </div>
 
                     <div class="flex-1 bg-navy-800 p-8 rounded-2xl shadow text-white">
                         <h3 class="text-2xl font-bold text-cream mb-4">¿Es siempre una computadora?</h3>
                         <p class="text-gray-300 text-lg mb-6 leading-relaxed">
-                            <strong class="text-red-400 text-2xl">NO.</strong> No es necesariamente una computadora.
+                            <strong class="text-red-400 text-2xl">NO.</strong> Puede ser:
                         </p>
                         <ul class="space-y-4">
                             <li class="flex items-center gap-3"><i class="ph ph-user text-2xl text-navy-primary"></i> Una persona</li>
-                            <li class="flex items-center gap-3"><i class="ph ph-gear text-2xl text-navy-primary"></i> Un mecanismo físico</li>
+                            <li class="flex items-center gap-3"><i class="ph ph-gear text-2xl text-navy-primary"></i> Un mecanismo físico o robot</li>
                             <li class="flex items-center gap-3"><i class="ph ph-code text-2xl text-navy-primary"></i> Un sistema de software</li>
                         </ul>
                     </div>
@@ -231,7 +225,7 @@
                         </div>
                         <div>
                             <h3 class="text-2xl font-bold text-navy-900">Omnisciencia</h3>
-                            <p class="text-gray-600 mt-2">Capacidad de conocer <strong>todo</strong>, o al menos toda la información necesaria para tomar una decisión correcta. (Casi imposible en la realidad).</p>
+                            <p class="text-gray-600 mt-2">Capacidad de conocer <strong>todo</strong>, o al menos toda la información necesaria para tomar una decisión correcta.</p>
                         </div>
                     </div>
 
@@ -241,7 +235,7 @@
                         </div>
                         <div>
                             <h3 class="text-2xl font-bold text-navy-900">Aprendizaje</h3>
-                            <p class="text-gray-600 mt-2">Capacidad de utilizar las experiencias y percepciones previas para <strong>mejorar el comportamiento</strong> y tomar mejores decisiones a futuro.</p>
+                            <p class="text-gray-600 mt-2">Capacidad de utilizar las experiencias y percepciones obtenidas para <strong>mejorar el comportamiento</strong> y tomar mejores decisiones en el futuro.</p>
                         </div>
                     </div>
 
@@ -251,7 +245,7 @@
                         </div>
                         <div>
                             <h3 class="text-2xl font-bold text-navy-900">Autonomía</h3>
-                            <p class="text-gray-600 mt-2">Capacidad de <strong>actuar basándose en la propia experiencia</strong>, aprendiendo y compensando la falta de conocimiento inicial sin depender de datos precargados.</p>
+                            <p class="text-gray-600 mt-2">Capacidad de <strong>actuar basándose en la propia experiencia</strong>, compensando la falta de conocimiento inicial sin depender de información pre-cargada.</p>
                         </div>
                     </div>
                 </div>
@@ -265,54 +259,44 @@
                 <h2 class="text-3xl md:text-4xl font-bold text-navy-800 mb-8 border-b-2 border-navy-primary pb-4 inline-block">Tipos de Agentes (Estructura)</h2>
                 
                 <div class="grid grid-cols-1 md:grid-cols-5 gap-4 h-full">
-                    <!-- Agente 1 -->
                     <div class="bg-cream-card p-4 rounded-xl shadow border border-gray-200 flex flex-col relative overflow-hidden group">
-                        <div class="absolute top-0 right-0 w-8 h-8 bg-gray-200 rounded-bl-full flex items-center justify-center font-bold text-gray-500">1</div>
-                        <h4 class="font-bold text-navy-800 mb-2">Reactivo Simple</h4>
-                        <p class="text-xs text-gray-600 mb-4 flex-grow">Actúa solo según la percepción actual (Si/Entonces). Sin memoria.</p>
+                        <h4 class="font-bold text-navy-800 mb-2">1. Reactivo Simple</h4>
+                        <p class="text-xs text-gray-600 mb-4 flex-grow">Actúa según lo que percibe en ese momento (si ocurre esto, hacer aquello). Sin memoria.</p>
                         <div class="mt-auto bg-gray-100 p-2 rounded text-xs italic">Ej: Aspiradora básica</div>
                     </div>
 
-                    <!-- Agente 2 -->
                     <div class="bg-cream-card p-4 rounded-xl shadow border border-blue-200 flex flex-col relative overflow-hidden">
-                        <div class="absolute top-0 right-0 w-8 h-8 bg-blue-200 rounded-bl-full flex items-center justify-center font-bold text-blue-700">2</div>
-                        <h4 class="font-bold text-navy-800 mb-2">Con Modelo</h4>
-                        <p class="text-xs text-gray-600 mb-4 flex-grow">Mantiene un estado interno/modelo del entorno no observable directamente.</p>
+                        <h4 class="font-bold text-navy-800 mb-2">2. Basado en Modelos</h4>
+                        <p class="text-xs text-gray-600 mb-4 flex-grow">Mantiene un estado interno/modelo del entorno no observable directamente. Tiene modelos matemáticos pre-cargados.</p>
                         <div class="mt-auto bg-blue-50 p-2 rounded text-xs italic">Ej: Termostato inteligente</div>
                     </div>
 
-                    <!-- Agente 3 -->
                     <div class="bg-cream-card p-4 rounded-xl shadow border border-navy-300 flex flex-col relative overflow-hidden">
-                        <div class="absolute top-0 right-0 w-8 h-8 bg-navy-300 rounded-bl-full flex items-center justify-center font-bold text-navy-800">3</div>
-                        <h4 class="font-bold text-navy-800 mb-2">Basado en Objetivos</h4>
-                        <p class="text-xs text-gray-600 mb-4 flex-grow">Posee metas. Analiza acciones a futuro para elegir la que lo acerque a la meta.</p>
+                        <h4 class="font-bold text-navy-800 mb-2">3. Basado en Objetivos</h4>
+                        <p class="text-xs text-gray-600 mb-4 flex-grow">Posee metas. Analiza acciones a futuro para elegir la que lo acerque a su meta.</p>
                         <div class="mt-auto bg-navy-50 p-2 rounded text-xs italic">Ej: Navegador GPS</div>
                     </div>
 
-                    <!-- Agente 4 -->
                     <div class="bg-cream-card p-4 rounded-xl shadow border border-navy-500 flex flex-col relative overflow-hidden">
-                        <div class="absolute top-0 right-0 w-8 h-8 bg-navy-500 rounded-bl-full flex items-center justify-center font-bold text-white">4</div>
-                        <h4 class="font-bold text-navy-800 mb-2">Basado en Utilidad</h4>
-                        <p class="text-xs text-gray-600 mb-4 flex-grow">Usa una función para comparar resultados y elegir la vía más "conveniente".</p>
+                        <h4 class="font-bold text-navy-800 mb-2">4. Basado en Utilidad</h4>
+                        <p class="text-xs text-gray-600 mb-4 flex-grow">Usa una función de utilidad para comparar resultados y elegir la vía más "conveniente".</p>
                         <div class="mt-auto bg-navy-100 p-2 rounded text-xs italic">Ej: Clima eficiente (confort vs gasto)</div>
                     </div>
 
-                    <!-- Agente 5 -->
                     <div class="bg-navy-800 text-white p-4 rounded-xl shadow border border-navy-800 flex flex-col relative overflow-hidden">
-                        <div class="absolute top-0 right-0 w-8 h-8 bg-navy-primary rounded-bl-full flex items-center justify-center font-bold text-white">5</div>
-                        <h4 class="font-bold text-cream mb-2">Que Aprende</h4>
-                        <p class="text-xs text-gray-300 mb-4 flex-grow">Adapta su comportamiento basado en experiencias previas.</p>
+                        <h4 class="font-bold text-cream mb-2">5. Que Aprende</h4>
+                        <p class="text-xs text-gray-300 mb-4 flex-grow">Adapta su comportamiento basado en sus experiencias previas y resultados obtenidos.</p>
                         <div class="mt-auto bg-navy-900 p-2 rounded text-xs italic">Ej: Robot esquivando obstáculos</div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- SLIDE 7: Ejercicio 6 -->
+        <!-- SLIDE 7: Ejercicio 6 - Entornos 1 -->
         <section class="slide" id="slide-7">
             <div class="slide-content-wrapper">
-                <div class="text-sm font-bold text-navy-primary mb-2 uppercase tracking-wider">Ejercicio 6</div>
-                <h2 class="text-3xl md:text-4xl font-bold text-navy-800 mb-8 border-b-2 border-navy-primary pb-4 inline-block">Propiedades del Entorno</h2>
+                <div class="text-sm font-bold text-navy-primary mb-2 uppercase tracking-wider">Ejercicio 6 (Parte 1)</div>
+                <h2 class="text-3xl md:text-4xl font-bold text-navy-800 mb-8 border-b-2 border-navy-primary pb-4 inline-block">Propiedades de los Entornos</h2>
                 
                 <div class="overflow-x-auto bg-white rounded-xl shadow-lg border border-gray-200">
                     <table class="w-full text-left border-collapse">
@@ -321,15 +305,17 @@
                                 <th class="p-3 border-b">Entorno</th>
                                 <th class="p-3 border-b">Observabilidad</th>
                                 <th class="p-3 border-b">Determinismo</th>
+                                <th class="p-3 border-b">Secuencia</th>
                                 <th class="p-3 border-b">Dinámica</th>
                                 <th class="p-3 border-b">Naturaleza</th>
                             </tr>
                         </thead>
                         <tbody class="text-sm">
                             <tr class="hover:bg-gray-50 border-b">
-                                <td class="p-3 font-bold flex items-center gap-2"><i class="ph ph-strategy"></i> Ajedrez / Damas</td>
+                                <td class="p-3 font-bold flex items-center gap-2"><i class="ph ph-strategy"></i> Ajedrez</td>
                                 <td class="p-3 text-green-600">Total</td>
                                 <td class="p-3 text-green-600">Determinista</td>
+                                <td class="p-3">Secuencial</td>
                                 <td class="p-3">Estático</td>
                                 <td class="p-3">Discreto</td>
                             </tr>
@@ -337,6 +323,7 @@
                                 <td class="p-3 font-bold flex items-center gap-2"><i class="ph ph-basketball"></i> Baloncesto</td>
                                 <td class="p-3 text-orange-600">Parcial</td>
                                 <td class="p-3 text-orange-600">Estocástico</td>
+                                <td class="p-3">Secuencial</td>
                                 <td class="p-3">Dinámico</td>
                                 <td class="p-3">Continuo</td>
                             </tr>
@@ -344,15 +331,25 @@
                                 <td class="p-3 font-bold flex items-center gap-2"><i class="ph ph-ghost"></i> Pacman</td>
                                 <td class="p-3 text-green-600">Total</td>
                                 <td class="p-3 text-green-600">Determinista</td>
+                                <td class="p-3">Secuencial</td>
                                 <td class="p-3">Dinámico</td>
                                 <td class="p-3">Discreto</td>
                             </tr>
                             <tr class="hover:bg-gray-50 border-b">
-                                <td class="p-3 font-bold flex items-center gap-2"><i class="ph ph-robot"></i> Robot Marte</td>
-                                <td class="p-3 text-orange-600">Parcial</td>
-                                <td class="p-3 text-orange-600">Estocástico</td>
-                                <td class="p-3">Dinámico</td>
-                                <td class="p-3">Continuo</td>
+                                <td class="p-3 font-bold flex items-center gap-2"><i class="ph ph-strategy"></i> Damas</td>
+                                <td class="p-3 text-green-600">Total</td>
+                                <td class="p-3 text-green-600">Determinista</td>
+                                <td class="p-3">Secuencial</td>
+                                <td class="p-3">Estático</td>
+                                <td class="p-3">Discreto</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="p-3 font-bold flex items-center gap-2"><i class="ph ph-grid-nine"></i> Ta-te-ti</td>
+                                <td class="p-3 text-green-600">Total</td>
+                                <td class="p-3 text-green-600">Determinista</td>
+                                <td class="p-3">Secuencial</td>
+                                <td class="p-3">Estático</td>
+                                <td class="p-3">Discreto</td>
                             </tr>
                         </tbody>
                     </table>
@@ -360,8 +357,57 @@
             </div>
         </section>
 
-        <!-- SLIDE 8: Ejercicio 6 - El Truco -->
+        <!-- SLIDE 8: Ejercicio 6 - Entornos 2 -->
         <section class="slide" id="slide-8">
+            <div class="slide-content-wrapper">
+                <div class="text-sm font-bold text-navy-primary mb-2 uppercase tracking-wider">Ejercicio 6 (Parte 2)</div>
+                <h2 class="text-3xl md:text-4xl font-bold text-navy-800 mb-8 border-b-2 border-navy-primary pb-4 inline-block">Propiedades de los Entornos</h2>
+                
+                <div class="overflow-x-auto bg-white rounded-xl shadow-lg border border-gray-200">
+                    <table class="w-full text-left border-collapse">
+                        <thead>
+                            <tr class="bg-navy-900 text-white">
+                                <th class="p-3 border-b">Entorno</th>
+                                <th class="p-3 border-b">Observabilidad</th>
+                                <th class="p-3 border-b">Determinismo</th>
+                                <th class="p-3 border-b">Secuencia</th>
+                                <th class="p-3 border-b">Dinámica</th>
+                                <th class="p-3 border-b">Naturaleza</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-sm">
+                            <tr class="hover:bg-gray-50 border-b">
+                                <td class="p-3 font-bold flex items-center gap-2"><i class="ph ph-device-mobile"></i> Pokémon Go</td>
+                                <td class="p-3 text-orange-600">Parcial</td>
+                                <td class="p-3 text-orange-600">Estocástico</td>
+                                <td class="p-3">Secuencial</td>
+                                <td class="p-3">Dinámico</td>
+                                <td class="p-3">Continuo</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50 border-b">
+                                <td class="p-3 font-bold flex items-center gap-2"><i class="ph ph-robot"></i> Robot Marte</td>
+                                <td class="p-3 text-orange-600">Parcial</td>
+                                <td class="p-3 text-orange-600">Estocástico</td>
+                                <td class="p-3">Secuencial</td>
+                                <td class="p-3">Dinámico</td>
+                                <td class="p-3">Continuo</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="mt-8 bg-cream-dark p-4 rounded-xl border border-gray-200 shadow-sm flex items-start gap-4">
+                    <i class="ph ph-info text-2xl text-navy-primary"></i>
+                    <div>
+                        <p class="font-bold text-navy-800 mb-1">Nota sobre Pokémon Go y Robot de Marte:</p>
+                        <p class="text-sm text-gray-700">Ambos entornos son <strong>Continuos</strong> debido a su dependencia del espacio físico real (coordenadas GPS continuas para Pokémon Go y ángulos/velocidades para el Robot). Además, son <strong>Estocásticos</strong> por su fuerte dependencia a variables aleatorias o impredecibles (clima, terreno, tasas de aparición).</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SLIDE 9: Ejercicio 6 - El Truco -->
+        <section class="slide" id="slide-9">
             <div class="slide-content-wrapper">
                 <div class="text-sm font-bold text-navy-primary mb-2 uppercase tracking-wider">Ejercicio 6 (Detalle)</div>
                 <h2 class="text-3xl md:text-4xl font-bold text-navy-800 mb-8 border-b-2 border-navy-primary pb-4 inline-block">Análisis del Entorno: El Truco</h2>
@@ -379,19 +425,19 @@
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                             <div class="bg-white p-3 rounded shadow-sm border border-gray-100">
                                 <span class="font-bold text-navy-900 block">Parcialmente Observable</span>
-                                <span class="text-sm text-gray-600">No se ven las cartas rivales.</span>
+                                <span class="text-sm text-gray-600">No se ven las cartas rivales ni el mazo.</span>
                             </div>
                             <div class="bg-white p-3 rounded shadow-sm border border-gray-100">
                                 <span class="font-bold text-navy-900 block">Estocástico</span>
-                                <span class="text-sm text-gray-600">El reparto introduce azar.</span>
+                                <span class="text-sm text-gray-600">El reparto introduce azar e info oculta.</span>
                             </div>
                             <div class="bg-white p-3 rounded shadow-sm border border-gray-100">
                                 <span class="font-bold text-navy-900 block">Secuencial / Episódico</span>
-                                <span class="text-sm text-gray-600">Secuencial en la mano, episódico entre manos.</span>
+                                <span class="text-sm text-gray-600">Secuencial en la mano, episódico entre rondas.</span>
                             </div>
                             <div class="bg-white p-3 rounded shadow-sm border border-gray-100">
                                 <span class="font-bold text-navy-900 block">Estático</span>
-                                <span class="text-sm text-gray-600">Espera a que el jugador decida.</span>
+                                <span class="text-sm text-gray-600">Hay tiempo para tomar una decisión.</span>
                             </div>
                             <div class="bg-white p-3 rounded shadow-sm border border-gray-100">
                                 <span class="font-bold text-navy-900 block">Discreto</span>
@@ -407,51 +453,146 @@
             </div>
         </section>
 
-        <!-- SLIDE 9: Ejercicio 7 -->
-        <section class="slide" id="slide-9">
+        <!-- SLIDE 10: Ejercicio 7 - Crucigrama -->
+        <section class="slide" id="slide-10">
             <div class="slide-content-wrapper">
-                <div class="text-sm font-bold text-navy-primary mb-2 uppercase tracking-wider">Ejercicio 7</div>
-                <h2 class="text-3xl md:text-4xl font-bold text-navy-800 mb-8 border-b-2 border-navy-primary pb-4 inline-block">Tabla REAS (Ejemplos)</h2>
+                <div class="text-sm font-bold text-navy-primary mb-2 uppercase tracking-wider">Ejercicio 7 (Caso A)</div>
+                <h2 class="text-3xl md:text-4xl font-bold text-navy-800 mb-8 border-b-2 border-navy-primary pb-4 inline-block">Tabla REAS: Crucigrama</h2>
                 
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <!-- Crucigrama -->
-                    <div class="bg-cream-card rounded-xl shadow border border-gray-200 overflow-hidden">
-                        <div class="bg-navy-800 text-white p-3 font-bold text-center">a. Crucigrama</div>
-                        <div class="p-4 space-y-2 text-sm">
-                            <p><strong class="text-navy-primary">R</strong>: Palabras correctas, tiempo.</p>
-                            <p><strong class="text-navy-primary">E</strong>: Cuadrícula, definiciones.</p>
-                            <p><strong class="text-navy-primary">A</strong>: Escribir letras.</p>
-                            <p><strong class="text-navy-primary">S</strong>: Leer pistas, ver celdas vacías.</p>
+                <p class="text-lg text-gray-700 mb-6 border-l-4 border-navy-600 pl-4 bg-white p-4 rounded shadow-sm">
+                    <strong>Agente:</strong> Sistema encargado de resolver un crucigrama.
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-white p-6 rounded-xl shadow border-t-4 border-navy-primary">
+                        <div class="flex items-center gap-3 mb-4">
+                            <i class="ph ph-flag text-3xl text-navy-primary"></i>
+                            <h3 class="text-xl font-bold text-navy-900">R - Rendimiento</h3>
                         </div>
+                        <p class="text-gray-600">Completar correctamente la mayor cantidad posible de palabras, minimizar errores y resolverlo en el menor tiempo posible.</p>
                     </div>
 
-                    <!-- Taxi -->
-                    <div class="bg-cream-card rounded-xl shadow border border-gray-200 overflow-hidden transform md:-translate-y-4">
-                        <div class="bg-navy-primary text-white p-3 font-bold text-center">b. Taxi circulando</div>
-                        <div class="p-4 space-y-2 text-sm">
-                            <p><strong class="text-navy-900">R</strong>: Llegar seguro, rápido, ganancia.</p>
-                            <p><strong class="text-navy-900">E</strong>: Calles, tráfico, clima.</p>
-                            <p><strong class="text-navy-900">A</strong>: Volante, freno, acelerador.</p>
-                            <p><strong class="text-navy-900">S</strong>: Cámaras, GPS, velocímetro.</p>
+                    <div class="bg-white p-6 rounded-xl shadow border-t-4 border-navy-600">
+                        <div class="flex items-center gap-3 mb-4">
+                            <i class="ph ph-map-trifold text-3xl text-navy-600"></i>
+                            <h3 class="text-xl font-bold text-navy-900">E - Entorno</h3>
                         </div>
+                        <p class="text-gray-600">Grilla del crucigrama, casillas, pistas horizontales y verticales, y las letras que ya fueron colocadas.</p>
                     </div>
 
-                    <!-- Robot clasificador -->
-                    <div class="bg-cream-card rounded-xl shadow border border-gray-200 overflow-hidden">
-                        <div class="bg-navy-800 text-white p-3 font-bold text-center">c. Robot Clasificador</div>
-                        <div class="p-4 space-y-2 text-sm">
-                            <p><strong class="text-navy-primary">R</strong>: % piezas correctas, cajas llenas.</p>
-                            <p><strong class="text-navy-primary">E</strong>: Cinta transportadora, piezas.</p>
-                            <p><strong class="text-navy-primary">A</strong>: Brazo mecánico, expulsor.</p>
-                            <p><strong class="text-navy-primary">S</strong>: Sensores ópticos, cámara, peso.</p>
+                    <div class="bg-white p-6 rounded-xl shadow border-t-4 border-navy-700">
+                        <div class="flex items-center gap-3 mb-4">
+                            <i class="ph ph-robot text-3xl text-navy-700"></i>
+                            <h3 class="text-xl font-bold text-navy-900">A - Actuadores</h3>
                         </div>
+                        <p class="text-gray-600">Escribir letras o palabras, borrar equivocaciones y reemplazar respuestas.</p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-xl shadow border-t-4 border-navy-800">
+                        <div class="flex items-center gap-3 mb-4">
+                            <i class="ph ph-webcam text-3xl text-navy-800"></i>
+                            <h3 class="text-xl font-bold text-navy-900">S - Sensores</h3>
+                        </div>
+                        <p class="text-gray-600">Leer las pistas, observar las casillas disponibles en la grilla y reconocer las letras ya ingresadas.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- SLIDE 10: Ejercicio 8 -->
-        <section class="slide" id="slide-10">
+        <!-- SLIDE 11: Ejercicio 7 - Taxi Circulando -->
+        <section class="slide" id="slide-11">
+            <div class="slide-content-wrapper">
+                <div class="text-sm font-bold text-navy-primary mb-2 uppercase tracking-wider">Ejercicio 7 (Caso B)</div>
+                <h2 class="text-3xl md:text-4xl font-bold text-navy-800 mb-8 border-b-2 border-navy-primary pb-4 inline-block">Tabla REAS: Taxi Circulando</h2>
+                
+                <p class="text-lg text-gray-700 mb-6 border-l-4 border-navy-600 pl-4 bg-white p-4 rounded shadow-sm">
+                    <strong>Agente:</strong> Taxi autónomo trasladando pasajeros al destino.
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-white p-6 rounded-xl shadow border-t-4 border-navy-primary">
+                        <div class="flex items-center gap-3 mb-4">
+                            <i class="ph ph-flag text-3xl text-navy-primary"></i>
+                            <h3 class="text-xl font-bold text-navy-900">R - Rendimiento</h3>
+                        </div>
+                        <p class="text-gray-600">Llegar seguro, respetar normas de tránsito, reducir tiempo de viaje y combustible, mantener confort del pasajero.</p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-xl shadow border-t-4 border-navy-600">
+                        <div class="flex items-center gap-3 mb-4">
+                            <i class="ph ph-map-trifold text-3xl text-navy-600"></i>
+                            <h3 class="text-xl font-bold text-navy-900">E - Entorno</h3>
+                        </div>
+                        <p class="text-gray-600">Calles, rutas, otros vehículos, peatones, pasajeros, semáforos, señales, obstáculos y clima.</p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-xl shadow border-t-4 border-navy-700">
+                        <div class="flex items-center gap-3 mb-4">
+                            <i class="ph ph-car text-3xl text-navy-700"></i>
+                            <h3 class="text-xl font-bold text-navy-900">A - Actuadores</h3>
+                        </div>
+                        <p class="text-gray-600">Volante, acelerador, freno, caja de cambios, luces, bocina y señalizadores.</p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-xl shadow border-t-4 border-navy-800">
+                        <div class="flex items-center gap-3 mb-4">
+                            <i class="ph ph-radar text-3xl text-navy-800"></i>
+                            <h3 class="text-xl font-bold text-navy-900">S - Sensores</h3>
+                        </div>
+                        <p class="text-gray-600">Cámaras, GPS, sensores de distancia, radar/LiDAR, velocímetro y sensores del vehículo.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SLIDE 12: Ejercicio 7 - Robot Clasificador -->
+        <section class="slide" id="slide-12">
+            <div class="slide-content-wrapper">
+                <div class="text-sm font-bold text-navy-primary mb-2 uppercase tracking-wider">Ejercicio 7 (Caso C)</div>
+                <h2 class="text-3xl md:text-4xl font-bold text-navy-800 mb-8 border-b-2 border-navy-primary pb-4 inline-block">Tabla REAS: Robot Clasificador</h2>
+                
+                <p class="text-lg text-gray-700 mb-6 border-l-4 border-navy-600 pl-4 bg-white p-4 rounded shadow-sm">
+                    <strong>Agente:</strong> Robot encargado de identificar y separar piezas.
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-white p-6 rounded-xl shadow border-t-4 border-navy-primary">
+                        <div class="flex items-center gap-3 mb-4">
+                            <i class="ph ph-flag text-3xl text-navy-primary"></i>
+                            <h3 class="text-xl font-bold text-navy-900">R - Rendimiento</h3>
+                        </div>
+                        <p class="text-gray-600">Clasificar correctamente las piezas, reducir errores, evitar daños y hacerlo en el menor tiempo.</p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-xl shadow border-t-4 border-navy-600">
+                        <div class="flex items-center gap-3 mb-4">
+                            <i class="ph ph-map-trifold text-3xl text-navy-600"></i>
+                            <h3 class="text-xl font-bold text-navy-900">E - Entorno</h3>
+                        </div>
+                        <p class="text-gray-600">Cinta transportadora, piezas a clasificar, zona de trabajo y recipientes/sectores de depósito.</p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-xl shadow border-t-4 border-navy-700">
+                        <div class="flex items-center gap-3 mb-4">
+                            <i class="ph ph-robot-arm text-3xl text-navy-700"></i>
+                            <h3 class="text-xl font-bold text-navy-900">A - Actuadores</h3>
+                        </div>
+                        <p class="text-gray-600">Brazo robótico, motores, pinza o sistema de agarre y mecanismos desplazadores.</p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-xl shadow border-t-4 border-navy-800">
+                        <div class="flex items-center gap-3 mb-4">
+                            <i class="ph ph-barcode text-3xl text-navy-800"></i>
+                            <h3 class="text-xl font-bold text-navy-900">S - Sensores</h3>
+                        </div>
+                        <p class="text-gray-600">Cámaras, sensores de presencia, color, forma, tamaño y posición.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SLIDE 13: Ejercicio 8 - Hormiga de Langton -->
+        <section class="slide" id="slide-13">
             <div class="slide-content-wrapper">
                 <div class="text-sm font-bold text-navy-primary mb-2 uppercase tracking-wider">Ejercicio Práctico 8</div>
                 <h2 class="text-3xl md:text-4xl font-bold text-navy-800 mb-6 border-b-2 border-navy-primary pb-4 inline-block">La Hormiga de Langton</h2>
@@ -468,28 +609,30 @@
                             </li>
                         </ul>
                         <div class="bg-blue-50 p-4 rounded-lg border border-blue-200 text-sm">
-                            <strong class="text-navy-800 block mb-1">¿Patrón?</strong>
-                            Sí, se genera un comportamiento emergente. Tras un período caótico, la hormiga construye sistemáticamente una "autopista" (aprox. iteración 10.000).
+                            <strong class="text-navy-800 block mb-1">¿Patrón observado?</strong>
+                            Sí. Tras un período inicial aparentemente caótico, la hormiga comienza a construir sistemáticamente una estructura llamada "autopista" de manera predecible.
                         </div>
                     </div>
                     
-                    <div class="w-full md:w-1/2 bg-cream-dark rounded-xl flex items-center justify-center p-8 border-2 border-dashed border-gray-300 flex-col text-center">
-                        <i class="ph ph-image text-4xl text-gray-400 mb-2"></i>
-                        <p class="text-gray-500 font-semibold text-sm">[Insertar aquí la imagen del gráfico de Python (Plot de la autopista)]</p>
+                    <div class="w-full md:w-1/2 bg-white rounded-xl shadow flex items-center justify-center p-2 border border-gray-200 overflow-hidden">
+                        
+                        <!-- INSTRUCCIÓN PARA IMAGEN: Reemplaza 'TU_IMAGEN_HORMIGA.png' por el nombre de tu archivo de imagen real -->
+                        <img src="TU_IMAGEN_HORMIGA.png" alt="Gráfico de la Hormiga de Langton" class="max-w-full max-h-[300px] object-contain" onerror="this.onerror=null; this.src='https://placehold.co/600x400/F0EBE1/1A365D?text=Insertar+Foto:+Hormiga';">
+                        
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- SLIDE 11: Ejercicio 9 -->
-        <section class="slide" id="slide-11">
+        <!-- SLIDE 14: Ejercicio 9 - Conway -->
+        <section class="slide" id="slide-14">
             <div class="slide-content-wrapper">
                 <div class="text-sm font-bold text-navy-primary mb-2 uppercase tracking-wider">Ejercicio Práctico 9</div>
                 <h2 class="text-3xl md:text-4xl font-bold text-navy-800 mb-6 border-b-2 border-navy-primary pb-4 inline-block">Juego de la Vida de Conway</h2>
                 
                 <div class="flex flex-col md:flex-row gap-6">
                     <div class="w-full md:w-1/2">
-                        <p class="text-gray-700 mb-4">Tablero donde cada casilla es una célula (viva/muerta) rodeada de 8 vecinas. El agente reacciona a su entorno:</p>
+                        <p class="text-gray-700 mb-4">El estado de todas las células se calcula en simultáneo según 8 vecinas:</p>
                         <div class="space-y-3">
                             <div class="bg-green-50 p-3 rounded border border-green-200">
                                 <strong class="text-green-700">Nacer:</strong> Célula muerta con exactamente 3 vecinas vivas.
@@ -503,27 +646,18 @@
                         </div>
                     </div>
                     
-                    <div class="w-full md:w-1/2 bg-navy-900 rounded-xl flex items-center justify-center p-8 border border-navy-700 flex-col text-center">
-                        <div class="grid grid-cols-3 gap-1 mb-4 opacity-70">
-                            <!-- Glider mockup -->
-                            <div class="w-6 h-6 bg-transparent border border-navy-600"></div>
-                            <div class="w-6 h-6 bg-green-400"></div>
-                            <div class="w-6 h-6 bg-transparent border border-navy-600"></div>
-                            <div class="w-6 h-6 bg-transparent border border-navy-600"></div>
-                            <div class="w-6 h-6 bg-transparent border border-navy-600"></div>
-                            <div class="w-6 h-6 bg-green-400"></div>
-                            <div class="w-6 h-6 bg-green-400"></div>
-                            <div class="w-6 h-6 bg-green-400"></div>
-                            <div class="w-6 h-6 bg-green-400"></div>
-                        </div>
-                        <p class="text-gray-400 font-semibold text-xs">[Reemplazar por Output de Matplotlib/Python]</p>
+                    <div class="w-full md:w-1/2 bg-white rounded-xl shadow flex items-center justify-center p-2 border border-gray-200 overflow-hidden">
+                        
+                        <!-- INSTRUCCIÓN PARA IMAGEN: Reemplaza 'TU_IMAGEN_CONWAY.png' por el nombre de tu archivo de imagen real -->
+                        <img src="TU_IMAGEN_CONWAY.png" alt="Gráfico del Juego de la Vida" class="max-w-full max-h-[300px] object-contain" onerror="this.onerror=null; this.src='https://placehold.co/600x400/0B192C/FDFCF8?text=Insertar+Foto:+Conway';">
+                        
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- SLIDE 12: Bibliografía y Cierre -->
-        <section class="slide" id="slide-12">
+        <!-- SLIDE 15: Bibliografía y Cierre -->
+        <section class="slide" id="slide-15">
             <div class="slide-content-wrapper items-center justify-center text-center h-full">
                 <i class="ph ph-books text-5xl text-navy-primary mb-6"></i>
                 <h1 class="text-4xl md:text-5xl font-bold text-navy-900 mb-6">Bibliografía y Cierre</h1>
@@ -553,7 +687,7 @@
         <button id="prevBtn" class="text-navy-700 hover:text-navy-primary disabled:opacity-30 disabled:cursor-not-allowed p-2 transition-colors">
             <i class="ph ph-caret-left text-2xl"></i>
         </button>
-        <span id="slideCounter" class="font-mono font-semibold text-navy-900 min-w-[3rem] text-center">1 / 12</span>
+        <span id="slideCounter" class="font-mono font-semibold text-navy-900 min-w-[3rem] text-center">1 / 15</span>
         <button id="nextBtn" class="text-navy-700 hover:text-navy-primary disabled:opacity-30 disabled:cursor-not-allowed p-2 transition-colors">
             <i class="ph ph-caret-right text-2xl"></i>
         </button>
@@ -570,7 +704,7 @@
             const totalSlides = slides.length;
 
             function updateSlide() {
-                // Actualizar clases
+                // Actualizar clases de visualización
                 slides.forEach((slide, index) => {
                     if (index === currentSlide) {
                         slide.classList.add('active');
@@ -579,10 +713,10 @@
                     }
                 });
 
-                // Contador
+                // Actualizar contador
                 slideCounter.textContent = `${currentSlide + 1} / ${totalSlides}`;
 
-                // Botones
+                // Deshabilitar botones si se llega al límite
                 prevBtn.disabled = currentSlide === 0;
                 nextBtn.disabled = currentSlide === totalSlides - 1;
             }
@@ -601,11 +735,11 @@
                 }
             }
 
-            // Click events
+            // Click events botones
             nextBtn.addEventListener('click', goToNext);
             prevBtn.addEventListener('click', goToPrev);
 
-            // Keyboard Nav
+            // Teclado (Flechas)
             document.addEventListener('keydown', (e) => {
                 if (e.key === 'ArrowRight' || e.key === 'Spacebar') {
                     goToNext();
@@ -614,7 +748,7 @@
                 }
             });
 
-            // Swipe support
+            // Swipe en dispositivos móviles
             let touchStartX = 0;
             let touchEndX = 0;
             
@@ -630,14 +764,14 @@
             function handleSwipe() {
                 const swipeThreshold = 50; 
                 if (touchEndX < touchStartX - swipeThreshold) {
-                    goToNext(); 
+                    goToNext(); // Swipe izquierda (avanzar)
                 }
                 if (touchEndX > touchStartX + swipeThreshold) {
-                    goToPrev(); 
+                    goToPrev(); // Swipe derecha (retroceder)
                 }
             }
 
-            // Init
+            // Inicializar la vista
             updateSlide();
         });
     </script>
