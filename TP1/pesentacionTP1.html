@@ -39,6 +39,25 @@
     
     <!-- Fuentes de Google -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+        @media print {
+            body, html, main {
+                overflow: visible !important;
+                height: auto !important;
+            }
+            .slide {
+                position: relative !important;
+                opacity: 1 !important;
+                visibility: visible !important;
+                transform: none !important;
+                page-break-after: always !important;
+                height: 100vh !important;
+            }
+            /* Ocultar la barra de botones inferior en el PDF */
+            .fixed {
+                display: none !important;
+            }
+        }
 
     <style>
         body {
