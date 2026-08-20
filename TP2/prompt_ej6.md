@@ -1,0 +1,7 @@
+Ahora vamos a deasarrollar otro ejercicio de Inteligencia Artificial en un Jupyter Notebook. El ejercicio consiste en programar un agente que utilice A* para desplazarse por una grilla evitando una pared u obstáculos, permitiendo que el usuario seleccione libremente la posición inicial y la posición objetivo.
+
+Quiero mantener el mismo enfoque de Programación Orientada a Objetos utilizado anteriormente. Cada celda debe identificarse por su posición dentro de la grilla y el algoritmo debe generar los nodos del árbol de búsqueda a medida que realiza A*. Utilizá g(n) como costo acumulado, h(n) como distancia de Manhattan y f(n)=g(n)+h(n). Cada movimiento válido debe tener costo 1 y las posiciones bloqueadas no pueden ser atravesadas.
+
+La selección del inicio y del objetivo debe realizarse mediante entrada por terminal usando input(), validando que las coordenadas estén dentro del tablero, que no correspondan a una pared y que inicio y objetivo sean diferentes. Una vez seleccionadas las posiciones, el agente debe ejecutar A*, reconstruir el camino mediante los nodos padre e informar el costo, la cantidad de nodos expandidos y el recorrido obtenido.
+
+Al final agregá una representación gráfica técnica del tablero, mostrando la grilla y los obstáculos, el camino encontrado con una línea roja oscura y marcando claramente el inicio y el objetivo. Priorizá un código legible, modular y fácil de explicar oralmente en una presentación.
