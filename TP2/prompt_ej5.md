@@ -1,0 +1,7 @@
+Actua como un experto en Inteligencia Artificial sobre algoritmos de búsqueda. La solución debe estar pensada para un Jupyter Notebook y quiero utilizar Programación Orientada a Objetos y buenas prácticas, pero sin hacer una arquitectura innecesariamente compleja.
+
+El problema consiste en representar un tablero como un grafo/espacio de estados y programar un agente que vaya desde una casilla inicial I hasta una casilla objetivo F utilizando tres estrategias: Primero en Profundidad, Búsqueda Avara y A*. Cada celda debería tener propiedades como nombre, posición, costo y vecinos, y los nodos de búsqueda deberían permitir guardar padre, g(n), h(n) y f(n) cuando corresponda.
+
+Respetá estrictamente las paredes y conexiones del tablero. El costo normal de atravesar una celda es 1, excepto W, que cuesta 30. Para la búsqueda informada utilizá distancia de Manhattan como heurística. Cuando exista un empate entre nodos con la misma prioridad, debe elegirse por orden alfabético. En DFS también quiero que la ramificación respete el orden alfabético y que profundice correctamente antes de retroceder.
+
+Organizá la respuesta para pegar el notebook: indicame celdas de código debo crear, explicando brevemente cada algoritmo y mostrando como resultado los nodos expandidos, el camino encontrado y el costo total. Agregá también una visualización técnica del grafo, con conexiones negras finas, nodos azul oscuro con texto blanco y el camino solución resaltado en rojo oscuro.
