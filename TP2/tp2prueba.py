@@ -118,7 +118,7 @@ nx.draw_networkx_edges(tree, pos, arrows=True, arrowsize=6, edge_color='#B0BEC5'
 edge_labels = nx.get_edge_attributes(tree, 'weight')
 nx.draw_networkx_edge_labels(tree, pos, edge_labels=edge_labels, font_size=5, font_color='#D32F2F', ax=ax)
 
-plt.title(f"Árbol de Búsqueda (Profundidad = {MAX_PASOS} pasos)", fontsize=16, fontweight='bold')
+plt.title(f"Árbol de Búsqueda", fontsize=16, fontweight='bold')
 plt.axis('off')
 plt.tight_layout()
 
